@@ -1,0 +1,9 @@
+package store.pharmaquick.payment.entity;
+
+public enum PaymentStatus {
+
+    CREATED,
+    SUCCESS,
+    FAILED,
+    REFUNDED
+}

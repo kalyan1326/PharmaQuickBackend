@@ -7,6 +7,7 @@ import store.pharmaquick.user.entity.User;
 import java.util.List;
 import java.util.Optional;
 
+
 public interface OrderRepository
         extends JpaRepository<Order, Long> {
 
@@ -14,6 +15,8 @@ public interface OrderRepository
     List<Order> findByUserOrderByCreatedAtDesc(
             User user
     );
+
+    List<Order> findAllByOrderByCreatedAtDesc();
 
     // Find a specific order belonging to a user
     Optional<Order> findByOrderIdAndUser(
